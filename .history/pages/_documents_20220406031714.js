@@ -36,7 +36,10 @@ MyDocument.getInitialProps = async (ctx) => {
     const emotionalStyles = extractCriticalToChunks(initialProps.html);
     const emotionalStylesTags = emotionalStyles.styles.map((style)=>{
         <style
-        
+          data-emotion={`${style.key} ${style.ids.join(' ')}`}
+          dangerouslySetInnerHTML={{ __html: style.css }}
         />
-    })
+    });
+    return {
+      ...initialProps,
 }

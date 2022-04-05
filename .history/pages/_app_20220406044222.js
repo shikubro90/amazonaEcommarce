@@ -4,11 +4,11 @@ import { CacheProvider } from '@emotion/react'
 
 const clientSideEmotionCache = createCache({ key: 'css' });
 
-function MyApp({Component, pageProps, emotionCache = clientSideEmotionCache}){
+function MyApp({Component, pageProps, emotionCache = clientSideEmotionCache,
+ }) 
+ {
   return(
-    <CacheProvider value={emotionCache}>
-    <Component {...pageProps}/>
-    </CacheProvider>
+    
   )
 }
 

@@ -11,5 +11,5 @@ export default function Home() {
       </Head>
       <Typography component="h1" variant="h1">Sanity</Typography>
     </div>
-  )
+  );
 }
